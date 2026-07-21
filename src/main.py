@@ -3,11 +3,11 @@ from pathlib import Path
 import random
 import calendar
 
-# Constants
+# Config + defaults
 CONFIG = {
-    'DISTANCE': 3000,
-    'ALLOW_BC':     0,
-    'ALLOW_FUTURE': 0
+    'DISTANCE'      : 3000,
+    'ALLOW_BC'      : 0,
+    'ALLOW_FUTURE'  : 0
 }
 
 # Weekdays are 0-based in Python
@@ -122,7 +122,7 @@ def run():
     read_config()
 
     print('Guess the weekday of a given date!')
-    print('You can type in a full day, a partial day, or a single letter. (Thursday = R, Sunday = D)')
+    print('You can enter a full day, a partial day, a single letter (Thu = R, Sun = D), or a number (Mon = 0).')
 
     choice = ''
     while choice.strip().upper() != 'Q':
