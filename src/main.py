@@ -99,7 +99,7 @@ def parse_guess(s: str) -> str:
         if name.startswith(s):
             return i
 
-def play():
+def play() -> bool:
     print()
 
     d = random_date()
