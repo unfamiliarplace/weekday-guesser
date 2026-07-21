@@ -43,8 +43,11 @@ def random_date() -> date:
     this_year = date.today().year
     
     min_year = this_year - CONFIG['DISTANCE']
-    if min_year < 0 and not CONFIG['ALLOW_BC']:
-        min_year = 0
+    # if min_year < 0 and not CONFIG['ALLOW_BC']:
+    #     min_year = 0
+
+    if min_year < 1:
+        min_year = 1
     
     max_year = this_year + CONFIG['DISTANCE']
     if max_year > this_year and not CONFIG['ALLOW_FUTURE']:
